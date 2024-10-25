@@ -134,7 +134,7 @@ def main():
     st.set_page_config(page_title='Free ATS Score Checker', page_icon=':shark', layout="wide")
 
     # Set app title and description
-    st.title('Free ATS Score Checker 📊')
+    st.title('ATS Score Checker 📊')
     st.markdown(
         "Evaluate your resume against a job description to get an ATS score. "
         "Improve your chances of getting shortlisted in the competitive job market."
