@@ -151,23 +151,26 @@ def main():
 
     # Display loading spinner while processing
     if submit:
-        if uploaded_files is not None and len(jd) > 50:
-            # Process the uploaded PDF
-            text = text_in_uploaded_pdf(uploaded_files)
+        if uploaded_files and len(jd) > 50:
+            # Process each uploaded PDF
+            for uploaded_file in uploaded_files:
+                # Extract text from the current PDF
+                text = text_in_uploaded_pdf(uploaded_file)
 
-            # Get Gemini response
-            response = get_gemini_response(input_prompt.format(text=text, jd=jd))
+                # Get Gemini response for each file
+                response = get_gemini_response(input_prompt.format(text=text, jd=jd))
 
-            # Display result
-            st.success('Your ATS score has been calculated successfully! 🚀')
-            st.subheader('ATS Score Results')
-            st.markdown(response)
+                # Display results for each PDF
+                st.success(f"ATS score for {uploaded_file.name} calculated successfully! 🚀")
+                st.subheader(f"ATS Score Results for {uploaded_file.name}")
+                st.markdown(response)
         else:
             # Display error messages
             if len(jd) < 50:
                 st.error('Please enter a detailed job description.')
-            elif uploaded_files is None:
-                st.error('Please upload your resume (PDF).')
+            elif not uploaded_files:
+                st.error('Please upload one or more resumes (PDF).')
 
 if __name__ == "__main__":
     main()
+
