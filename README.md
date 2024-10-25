@@ -89,23 +89,24 @@ To rank individual sections in a CV:
   
   Overall CV Ranking
       
-    To rank multiple CVs:
+   To rank multiple CVs:
     
-      Multiple CV Input: The system accepts multiple CVs along with a single job description.
+   Multiple CV Input: The system accepts multiple CVs along with a single job description.
       
-      Relevancy Factors:
+   Relevancy Factors:
       
-        Skills: Includes tools, languages, and expertise levels in alignment with the job description.
+   Skills: Includes tools, languages, and expertise levels in alignment with the job description.
         
-        Experience: Measures years in role, relevant industries, and key achievements.
+   Experience: Measures years in role, relevant industries, and key achievements.
         
-        Education: Prioritizes degrees, certifications, and any field-specific qualifications.
+   Education: Prioritizes degrees, certifications, and any field-specific qualifications.
         
-        Soft Skills: Weights attributes like communication and teamwork where relevant.
+   Soft Skills: Weights attributes like communication and teamwork where relevant.
         
-        Output: The model provides a ranked list of CVs based on total relevancy, with explanations for the ranking. The highest-ranked CV is most suitable for the job description provided.
+   Output: The model provides a ranked list of CVs based on total relevancy, with explanations for the ranking. The highest-ranked CV is most suitable for the job description provided.
         
       
 **License**
+
 This project is licensed under the MIT License.
 
