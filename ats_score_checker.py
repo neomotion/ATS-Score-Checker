@@ -131,7 +131,7 @@ def text_in_uploaded_pdf(uploaded_file):
 # Main Streamlit app
 def main():
     # Set app title and page icon
-    st.set_page_config(page_title='Free ATS Score Checker', page_icon=':shark', layout="wide")
+    st.set_page_config(page_title='ATS Score Checker', page_icon=':shark', layout="wide")
 
     # Set app title and description
     st.title('ATS Score Checker 📊')
